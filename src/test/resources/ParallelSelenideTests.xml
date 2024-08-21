@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ParallelSelenideTests" parallel="methods" thread-count="2">
+    <test name="Selenide Parallel Test">
+        <classes>
+            <class name="selenide.SelenideParallelTests"/>
+        </classes>
+    </test>
+</suite>

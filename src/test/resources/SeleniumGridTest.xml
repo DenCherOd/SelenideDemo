@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeleniumGridTest">
+    <test name="DownloadTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="hubUrl" value="example"/>
+        <classes>
+            <class name="selenium.SeleniumGridDownloadDemo"/>
+        </classes>
+    </test>
+</suite>
