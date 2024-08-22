@@ -2,7 +2,7 @@
 <suite name="ParallelSelenium" parallel="methods" thread-count="2">
     <test name="Selenium Parallel Test">
         <classes>
-            <class name="selenium.SeleniumGridParallels" />
+            <class name="selenium.SeleniumParallelTests" />
         </classes>
     </test>
 </suite>
