@@ -13,6 +13,8 @@ This project demonstrates parallel test execution using both Selenide and Seleni
 ## Advantages and Disadvantages
 ### Selenide Advantages:
 - `Transparent WebDriver` : You don’t need to operate with WebDriver directly. Selenide will start and shut down the browser automatically whenever it’s needed.
+
+
 - `Convenience methods`: Selenide provides concise API for that makes your tests shorter and more readable. Selenide has convenient methods for operating controls like textfield, radiobutton, selectbox, searching elements by texts and so on.
 ```sh
 @Test
@@ -36,8 +38,13 @@ public void canFillComplexForm() {
  
  $(".error").should(disappear);
 ```
+- `File downloading via Selenium Grid`: By default, when running tests on a remote WebDriver session (e.g., via Selenium Grid), downloaded files are typically stored on the machine where the browser session is running (the node), not on your local machine. However, it is possible to configure Selenium to download files to a specific directory on the local machine.
+
+
 - `Automated screenshots`: When your test fail, Selenide will automatically take screenshot. You do not need to do anything for it.
 
 ### Disadvantages:
 - `Size and Performance`: Adding Selenide to a project increases the number of dependencies and can slow down the initial project load.
+
+
 - `Single Browser Configuration per Test Run`: Selenide is designed to run tests on a single browser per execution by default. This means that during a single build or test run, you can typically only run tests on one browser at a time. If you want to run the same test suite on multiple browsers (e.g., Chrome, Firefox, and Safari), you would need to run separate test executions, each configured for a different browser.
